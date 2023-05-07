@@ -1,0 +1,351 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 62.5%;
+}
+.resume--body {
+  display: flex;
+  height: 100vh;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(213, 213, 213);
+}
+/*==========COLOR============ */
+
+/* ===========GENERAL========= */
+
+p {
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+h2 * {
+  display: flex;
+  align-items: center;
+  font-size: 2.8rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+}
+
+.md-font {
+  font-size: 2rem;
+}
+.heading-3 {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.padding-left {
+  padding-left: 1.7rem;
+}
+
+.svg-img {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  scale: 1.5 1.5;
+}
+.svg-title {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+/* =========Divider================ */
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(72, 72, 72, 0.4);
+  margin: auto auto 4rem auto;
+}
+/* ---------NAV SECTION------------ */
+
+.navbar header {
+  padding: 2rem 1rem;
+}
+.nav-title {
+  font-size: 3.4rem;
+}
+.navbar {
+  padding-top: 8rem;
+  width: 40rem;
+  overflow: scroll;
+  background-color: rgb(242, 240, 240);
+}
+
+.main-doc {
+  margin-top: 6rem;
+  flex: 1 1 100%;
+  overflow: scroll;
+}
+
+.navbar a {
+  display: block;
+  padding: 1rem;
+}
+.navbar li {
+  font-weight: 500;
+  border: solid 1px black;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  letter-spacing: 1px;
+}
+.navbar li:last-child {
+  border-bottom: solid 1px black;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+.nav-link:hover {
+  background-color: gray;
+  color: white;
+}
+
+/* ========MAIN SECTION============= */
+section {
+  margin-bottom: 4rem;
+}
+
+.main-doc {
+  background-color: rgb(213, 213, 213);
+  padding: 4rem 9.4rem;
+}
+
+/* ==============MAIN TITLE================ */
+.profile-img {
+  flex: 1 1 auto;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.main-img-div {
+  flex: 1 1 20%;
+}
+.main-title-contact {
+  position: relative;
+  margin-bottom: 7rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.main-title-contacts-div {
+  flex: 1 1 80%;
+}
+.main-title {
+  font-size: 4.8rem;
+  letter-spacing: 4px;
+}
+.adress-contact {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  font-weight: 500;
+}
+
+/* -------SKILLS SECTION---------- */
+
+.skills-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-list li {
+  flex: 1 1 50%;
+}
+
+/* ------------EDUCATION SECTION------------- */
+
+.college-div,
+.job-title-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.college-div {
+  margin-bottom: 2rem;
+}
+
+.college-info {
+  display: block;
+}
+
+/* ---------WORK INFO */
+
+.work-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.job-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.description-job {
+  font-weight: 500;
+}
+
+@media (max-width: 1510px) {
+  .main-title-contact {
+    display: block;
+    text-align: center;
+  }
+  .main-title-contacts-div {
+    display: inline-block;
+    text-align: center;
+  }
+  .main-img-div {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .job-title-div {
+    display: block;
+  }
+  .main-doc {
+    /* padding: 4rem 9.4rem; */
+    padding: 4rem 6rem;
+  }
+}
+@media (max-width: 1060px) {
+  .main-title {
+    font-size: 3.6rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .main-title-contact {
+    margin-bottom: 8rem;
+  }
+  .nav-title {
+    font-size: 2.8rem;
+    font-weight: 500;
+  }
+  p,
+  .nav-list,
+  li,
+  .adress-contact {
+    font-size: 92%;
+  }
+}
+
+@media (max-width: 910px) {
+  .resume--body {
+    display: block;
+  }
+  .navbar {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+  .main-doc {
+    /* padding: 4rem 9.4rem; */
+    padding: 4rem 4rem;
+  }
+
+  .nav-list {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 1rem 5px;
+  }
+  .nav-list li {
+    flex: 1 1 33.3%;
+    text-align: left;
+    text-align: center;
+  }
+
+  .nav-title {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -1;
+    left: -1;
+  }
+
+  .navbar .nav-list li,
+  .navbar .nav-list li:last-child {
+    border: none;
+    border-style: solid black;
+  }
+  .navbar .nav-list a {
+    font-size: 1.6rem;
+  }
+  .navbar header {
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-title {
+    letter-spacing: 1px;
+  }
+  .skills,
+  .skills-list,
+  .objective,
+  .college-info,
+  .college-div,
+  .education {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .skills-list {
+    list-style: none;
+    gap: 5px;
+    text-align: center;
+  }
+  .adress-contact {
+    flex-direction: column;
+    gap: 0;
+  }
+  .special-l {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+  .objective {
+    text-align: center;
+  }
+  .svg-title {
+    justify-content: center !important;
+  }
+
+  .heading-3 {
+    font-size: 95%;
+  }
+  .main-title-contact {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .heading-3 {
+    font-size: 1.6rem;
+  }
+  .navbar {
+    padding-top: 10rem;
+  }
+}
