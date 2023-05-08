@@ -16,9 +16,7 @@ const FooterMain = () => {
         <div className="footer-top-svg-div footer-maps-contact flex-row">
           <MapsSvg />
 
-          <h2 className="footer-top-headings">
-            337 Morning Side Ave, Scarborough
-          </h2>
+          <h2 className="footer-top-headings">Scarborough</h2>
         </div>
       </div>
       <FooterLinks />

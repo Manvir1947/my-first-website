@@ -4,20 +4,27 @@
   --section-background: rgb(226, 226, 226);
   /* --rotated-img-height: ; */
 }
+html {
+  overflow-x: hidden !important;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
+  width: auto !important;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
   font-size: 62.5%;
   font-family: "Golos Text", sans-serif;
   background-image: url("https://images.unsplash.com/photo-1530176928500-2372a88e00b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
   /* background-image: url("https://images.unsplash.com/photo-1534543210152-32025bcfaad9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"); */
   background-repeat: no-repeat;
   background-size: cover;
-
-  overflow-x: hidden;
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -260,6 +267,7 @@ body {
   position: relative;
   padding: max(5vw, 1rem);
   border-radius: 5rem;
+  overflow: hidden;
 }
 .animate {
   display: flex;
@@ -270,7 +278,7 @@ body {
   font-size: 2rem;
   /* overflow: hidden; */
   animation: marquee 20s linear infinite;
-  /* overflow: hidden; */
+  overflow: hidden !important;
   z-index: 0;
 }
 
