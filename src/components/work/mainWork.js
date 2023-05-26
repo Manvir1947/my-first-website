@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react";
 import InfoSvg from "./infoSvg";
+import projectInfoData from "./projectInfoData";
+import ProjectInfoPage from "./projectInfoPage";
 import {
   useScroll,
   useMotionValueEvent,
@@ -8,33 +10,14 @@ import {
 } from "framer-motion";
 
 const MainWork = () => {
-  const projectsPathList = [
-    {
-      path: "./projectsImages/productVillaProjectPng.png",
-      title:
-        "A responsive e commerce platform, provides variety of products to buy, add to cart and placing order options.",
-      href: "https://e-commerce-manvir.netlify.app/",
-    },
-    {
-      path: "./projectsImages/watchProductProject.png",
-      title:
-        "Introducing Smart Watch Website project: The ultimate solution for marketing, advertising and palcing orders through single platform.",
-      href: "#",
-    },
-    {
-      path: "./projectsImages/quizzicalPng.png",
-      title:
-        " Test your knowledge and have fun with our quiz website! Enable to see your score, quiz results, including the questions you got right and wrong, once you have completed the quiz.",
-      href: "#",
-    },
-    {
-      path: "./projectsImages/movieFightProject.png",
-      title:
-        "Find your next favorite movie with our comparison website! Compare reviews, ratings, and more to discover the perfect movie for you.",
-      href: "#",
-    },
-  ];
   const [yPosition, setYposition] = useState(0);
+  const [isInfoPopUp, setInfoPopUp] = useState({
+    0: false,
+    1: false,
+    2: false,
+    3: false,
+  });
+
   const elementRef = useRef();
   const { scrollYProgress } = useScroll({
     target: elementRef,
@@ -44,7 +27,7 @@ const MainWork = () => {
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     setYposition(latest);
   });
-  const projectElements = projectsPathList.map((project) => (
+  const projectElements = projectInfoData.map((project, index) => (
     <motion.a
       initial={{ scale: 0.2, y: 50 }}
       whileInView={{ y: 0, scale: 1, transition: { duration: 0.5 } }}
@@ -53,10 +36,27 @@ const MainWork = () => {
       href={project.href}
       rel="noopener noreferrer"
     >
+      {/* {isInfoPopUp[index] && (
+        <ProjectInfoPage
+          data={project}
+          setInfoPopUp={setInfoPopUp}
+          index={index}
+        />
+      )} */}
+
+      {isInfoPopUp[index] && (
+        <ProjectInfoPage
+          data={project}
+          setInfoPopUp={setInfoPopUp}
+          index={index}
+          isTrue={isInfoPopUp[index]}
+        />
+      )}
+
       <div className="project-only-img-div">
         <img
           className="project-image"
-          src={require(`${project.path}`)}
+          src={require(`./projectsImages/${project.img}`)}
           alt="Project Image"
         />
       </div>
@@ -70,7 +70,16 @@ const MainWork = () => {
         className="project-img-content-div"
         viewport={{ once: true }}
       >
-        <InfoSvg />
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: [1.1, 1, 1.1, 0.8, 1.1, 1, 1.1] }}
+          transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
+          onClick={() => {
+            setInfoPopUp((optionObj) => ({ ...optionObj, [index]: true }));
+          }}
+        >
+          <InfoSvg />
+        </motion.div>
         <h2 className="project-img-description-line">{project.title}</h2>
       </motion.div>
     </motion.a>

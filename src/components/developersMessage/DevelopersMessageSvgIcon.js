@@ -16,7 +16,9 @@ const DevelopersMessageSvgIcon = () => {
         duration: 3,
       }}
     >
-      <h1 className="developers-message-svg-caption">Contact Me ?</h1>
+      <a href="#contact-section" className="developers-message-svg-caption">
+        Contact Me ?
+      </a>
       <svg
         fill="#000000"
         viewBox="0 0 24 24"

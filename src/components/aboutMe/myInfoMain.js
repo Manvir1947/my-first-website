@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import DotsButton from "./buttonNab/dotsButton";
 import SliderShowingSvg from "./buttonNab/sliderShowingSvg";
+import linkedInIcon from "./linkedInIcon";
+import { Link } from "react-router-dom";
 const MyInfoMain = () => {
   const [isDotsButton, setDotsButton] = useState(false);
 
@@ -22,6 +24,12 @@ const MyInfoMain = () => {
   return (
     <>
       <div id="top-of-webpage"></div>
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/manvir-singh-a8b0a2178"
+      >
+        {linkedInIcon}
+      </a>
       <motion.div
         id="about-me"
         className="profile-img-title-div-container section-gap"
@@ -84,6 +92,11 @@ const MyInfoMain = () => {
             className="touch-nav-options-div flex-column"
           >
             <ul className="touch-nav-ul flex-column">
+              <li>
+                <Link to={"blog"} className="touch-nav-anchor-element">
+                  Blogs
+                </Link>
+              </li>
               <li>
                 <a className="touch-nav-anchor-element" href="#about-me">
                   About Me

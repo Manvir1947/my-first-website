@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Outlet } from "react-router";
 import NavBar from "./components/navBar";
 import { motion } from "framer-motion";
+import Wrapper from "./wrapper";
 
 const Root = () => {
   const [navShow, setNavShow] = useState(true);

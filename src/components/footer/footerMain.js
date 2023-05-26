@@ -11,7 +11,12 @@ const FooterMain = () => {
         <div className="footer-top-svg-div footer-email-contact flex-row">
           <EmailSvg />
 
-          <h2 className="footer-top-headings">singhmanvir6522@gmail.com</h2>
+          <a
+            className="footer-top-headings"
+            href="mailto:singhmanvir6522@gmail.com"
+          >
+            singhmanvir6522@gmail.com
+          </a>
         </div>
         <div className="footer-top-svg-div footer-maps-contact flex-row">
           <MapsSvg />

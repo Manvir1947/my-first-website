@@ -4,7 +4,7 @@ import footerSvgTitle from "./footerSvgAndLinks";
 const FooterLinks = () => {
   const footerLinksElements = footerSvgTitle.map((icon) => (
     <li className="footer-links-li ">
-      <a className="footer-links-anchor" href="">
+      <a className="footer-links-anchor" target="_blank" href={icon.href}>
         {icon.svg}
       </a>
     </li>
