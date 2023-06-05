@@ -1,7 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import InfoSvg from "./infoSvg";
 import projectInfoData from "./projectInfoData";
 import ProjectInfoPage from "./projectInfoPage";
+import OverFlowBackgroundHidden from "../overFlowBackgroundHidden";
 import {
   useScroll,
   useMotionValueEvent,
@@ -11,6 +12,9 @@ import {
 
 const MainWork = () => {
   const [yPosition, setYposition] = useState(0);
+  const BackgroundOverFlow = OverFlowBackgroundHidden();
+
+  const [isAnyInfoPopUp, setIsAnyPopUp] = useState(false);
   const [isInfoPopUp, setInfoPopUp] = useState({
     0: false,
     1: false,
@@ -27,39 +31,35 @@ const MainWork = () => {
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     setYposition(latest);
   });
+
   const projectElements = projectInfoData.map((project, index) => (
-    <motion.a
+    <motion.div
       initial={{ scale: 0.2, y: 50 }}
       whileInView={{ y: 0, scale: 1, transition: { duration: 0.5 } }}
       className="project-image-div stacked"
       viewport={{ once: true }}
-      href={project.href}
-      rel="noopener noreferrer"
     >
-      {/* {isInfoPopUp[index] && (
-        <ProjectInfoPage
-          data={project}
-          setInfoPopUp={setInfoPopUp}
-          index={index}
-        />
-      )} */}
-
       {isInfoPopUp[index] && (
         <ProjectInfoPage
           data={project}
           setInfoPopUp={setInfoPopUp}
           index={index}
           isTrue={isInfoPopUp[index]}
+          setIsAnyPopUp={setIsAnyPopUp}
         />
       )}
 
-      <div className="project-only-img-div">
+      <a
+        href={project.href}
+        rel="noopener noreferrer"
+        className="project-only-img-div"
+      >
         <img
           className="project-image"
           src={require(`./projectsImages/${project.img}`)}
           alt="Project Image"
         />
-      </div>
+      </a>
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{
@@ -74,7 +74,9 @@ const MainWork = () => {
           initial={{ scale: 0 }}
           animate={{ scale: [1.1, 1, 1.1, 0.8, 1.1, 1, 1.1] }}
           transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
-          onClick={() => {
+          onClick={(event) => {
+            event.preventDefault();
+            setIsAnyPopUp(true);
             setInfoPopUp((optionObj) => ({ ...optionObj, [index]: true }));
           }}
         >
@@ -82,7 +84,7 @@ const MainWork = () => {
         </motion.div>
         <h2 className="project-img-description-line">{project.title}</h2>
       </motion.div>
-    </motion.a>
+    </motion.div>
   ));
 
   return (

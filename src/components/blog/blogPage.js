@@ -4,13 +4,14 @@ import blogIntroductionData from "./blogIntroductionData";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import BlogListSliderNav from "./blogListSliderNav";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const BlogPage = () => {
   const [isListSlider, setListSlider] = useState(false);
   const { id } = useParams();
   const blog = blogIntroductionData.filter((blog) => blog.id == id);
   const BlogElement = [blog[0].blog];
+
   const listSliderVarient = {
     hidden: {
       width: "0px",

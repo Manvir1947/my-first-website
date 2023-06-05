@@ -4,6 +4,7 @@ export default [
       "A responsive e commerce platform, provides variety of products to buy, add to cart and placing order options.",
     infoTitle: "Product Villa",
     img: "productVillaProjectPng.png",
+    href: "https://e-commerce-manvir.netlify.app/",
     Path: "/projectVillaInfo",
     features: [
       <p>

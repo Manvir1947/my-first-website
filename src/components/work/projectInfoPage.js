@@ -2,7 +2,13 @@ import React from "react";
 import crossSvg from "./crossSvg";
 import { motion } from "framer-motion";
 
-const ProjectInfoPage = ({ data, setInfoPopUp, index, isTrue }) => {
+const ProjectInfoPage = ({
+  data,
+  setInfoPopUp,
+  index,
+  isTrue,
+  setIsAnyPopUp,
+}) => {
   const featuresList = data.features.map((ele) => {
     return <li className="project-info-page-features-li">{ele}</li>;
   });
@@ -30,6 +36,7 @@ const ProjectInfoPage = ({ data, setInfoPopUp, index, isTrue }) => {
         <div
           onClick={() => {
             setInfoPopUp((optionObj) => ({ ...optionObj, [index]: false }));
+            setIsAnyPopUp(false);
           }}
         >
           {crossSvg}
