@@ -288,8 +288,7 @@ section {
 
   .navbar .nav-list li,
   .navbar .nav-list li:last-child {
-    border: none;
-    border-style: solid black;
+    border: none !important;
   }
   .navbar .nav-list a {
     font-size: 1.6rem;
