@@ -12,7 +12,6 @@ import {
 
 const MainWork = () => {
   const [yPosition, setYposition] = useState(0);
-  const BackgroundOverFlow = OverFlowBackgroundHidden();
 
   const [isAnyInfoPopUp, setIsAnyPopUp] = useState(false);
   const [isInfoPopUp, setInfoPopUp] = useState({
@@ -51,6 +50,7 @@ const MainWork = () => {
 
       <a
         href={project.href}
+        target="_blank"
         rel="noopener noreferrer"
         className="project-only-img-div"
       >

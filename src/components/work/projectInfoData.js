@@ -4,7 +4,7 @@ export default [
       "A responsive e commerce platform, provides variety of products to buy, add to cart and placing order options.",
     infoTitle: "Product Villa",
     img: "productVillaProjectPng.png",
-    href: "https://e-commerce-manvir.netlify.app/",
+    href: "https://productvilla.netlify.app",
     Path: "/projectVillaInfo",
     features: [
       <p>
@@ -98,6 +98,7 @@ export default [
 
     infoTitle: "Quizzical",
     img: "quizzicalPng.png",
+    href: "https://manvir1947.github.io/quiz-app/",
     Path: "/projectVillaInfo",
     features: [
       <p>
@@ -156,6 +157,7 @@ export default [
       "Find your next favorite movie with my comparison website! Compare reviews, ratings, and more to discover the perfect movie for you.",
     infoTitle: "Movie Fight",
     img: "movieFightProject.png",
+    href: "https://moviefightreactapp.netlify.app",
     Path: "/projectVillaInfo",
     features: [
       <p>
