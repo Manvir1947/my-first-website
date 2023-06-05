@@ -55,6 +55,7 @@ export default [
     title:
       "Introducing Smart Watch Website project: The ultimate solution for marketing, advertising and palcing orders through single platform.",
     infoTitle: "SmartFit Watch",
+    href: "smartfitwatch.netlify.app",
     img: "watchProductProject.png",
     Path: "/projectVillaInfo",
     features: [
