@@ -158,7 +158,7 @@ export default [
       "Find your next favorite movie with my comparison website! Compare reviews, ratings, and more to discover the perfect movie for you.",
     infoTitle: "Movie Fight",
     img: "movieFightProject.png",
-    href: "https://moviefightreactapp.netlify.app",
+    href: "https://manvir1947.github.io/movie-fight/",
     Path: "/projectVillaInfo",
     features: [
       <p>
