@@ -719,12 +719,12 @@ body.modal-open {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: max(1.2vw, 1rem);
+  font-size: max(1.4vw, 1rem);
   flex: 1 1 70%;
 }
 
 .footer-social-media-svg {
-  width: max(3vw, 20px);
+  width: max(3vw, 25px);
 }
 .footer-social-media-svg:hover {
   scale: 1.2;
