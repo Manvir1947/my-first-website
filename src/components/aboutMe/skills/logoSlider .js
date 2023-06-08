@@ -8,6 +8,7 @@ const LogoSlider = () => {
     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/2560px-Sass_Logo_Color.svg.png",
     "https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png",
+    "https://logosandtypes.com/wp-content/uploads/2021/04/framer-motion.svg",
   ];
   const logoDivs = logosList.map((ele, index) => {
     return (

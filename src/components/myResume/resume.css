@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 62.5%;
+}
+.resume-section {
+  height: 100vh;
+  display: flex;
+  font-size: 1.8rem;
+  background-image: url(https://images.unsplash.com/photo-1493305457700-d3d24daf8c8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: rgb(243, 243, 243); */
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
+}
+.resume-img-div-container {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+
+  max-width: 1250px;
+  width: max(98vw, 300px);
+  max-height: 74vh;
+  padding: 1rem;
+  background-color: rgb(237, 236, 236);
+  gap: 2rem;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  display: flex;
+  /* box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15); */
+  flex-direction: column;
+}
+.resume-profile-img {
+  position: absolute;
+  top: 2%;
+  padding: 0.5rem;
+  background-color: rgb(237, 236, 236);
+  left: 2%;
+  max-width: 20rem;
+  max-height: 20rem;
+  border-radius: 50px;
+  width: max(8vw, 100px);
+  height: max(8vw, 100px);
+  object-fit: cover;
+  z-index: 100;
+}
+.download-pdf-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  top: 16%;
+  left: 70%;
+  cursor: pointer;
+}
+.pdf-svg {
+  width: max(2.2vw, 2.5rem);
+}
+
+.download-pdf-txt {
+  color: white;
+  font-weight: 500;
+  font-size: max(1.4vw, 1.1rem);
+}
+.download-pdf-txt:hover {
+  color: yellow;
+}
+
+@media (max-width: 500px) {
+  .resume-profile-img {
+    left: 50%;
+    top: 12%;
+    transform: translateX(-50%);
+  }
+}

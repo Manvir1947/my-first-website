@@ -25,7 +25,7 @@ export default [
     year: 2021,
     description: (
       <div className="timeline-description">
-        start learning basics of <span className="important-spans">Python</span>{" "}
+        Start learning basics of <span className="important-spans">Python</span>{" "}
         from <span className="important-spans">udemy</span> and books like
         python crash course
       </div>
@@ -35,7 +35,7 @@ export default [
     year: 2021,
     description: (
       <div className="timeline-description">
-        start learning basics of <span className="important-spans">C++</span>{" "}
+        Start learning basics of <span className="important-spans">C++</span>{" "}
         and spent 7 month to know the depth of{" "}
         <span className="important-spans">data optimisation</span> through
         pointers and references
@@ -46,7 +46,7 @@ export default [
     year: 2022,
     description: (
       <div className="timeline-description">
-        My jorney for web development have started from start of 2022 with
+        My journey for web development has started from start of 2022 with
         learning <span className="important-spans">CSS</span> and{" "}
         <span className="important-spans">HTML</span>, then{" "}
         <span className="important-spans">Java Script</span> and react

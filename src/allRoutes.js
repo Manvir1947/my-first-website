@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Main from "./main";
 import Root from "./root";
-import MyResume from "./components/myResume/myResume";
+import Resume from "./components/myResume/Resume";
 import BlogMain from "./components/blog/blogMain";
 import BlogHomePage from "./components/blog/blogHomePage";
 import TechnologyIndexPage from "./components/blog/technologyBlogs/technologyIndexPage";
@@ -26,7 +26,7 @@ const AllRoutes = () => {
           <Route index element={<Main />} />
           <Route
             path="resume"
-            element={PageTransitionAnimationFun(<MyResume />)}
+            element={PageTransitionAnimationFun(<Resume />)}
           />
           <Route
             path="blog"
@@ -94,48 +94,3 @@ const AllRoutes = () => {
 };
 
 export default AllRoutes;
-// const AllRoutes = () => {
-//   return (
-//     <Route path={"/"} element={<Root />}>
-//       <Route index element={<Main />} />
-//       <Route path="resume" element={<MyResume />} />
-
-//       <Route path="blog" element={<BlogMain />} />
-
-//       <Route path="/blog/blogEnter" element={<BlogHomePage />}>
-//         <Route index element={<AllCategoryIndexPage />} />
-//         <Route path="all" element={<AllCategoryIndexPage />} />
-//         <Route
-//           path="/blog/blogEnter/all/allblogspage"
-//           element={<AllBlogsListPage listedBlogPage={true} />}
-//         />
-//         <Route
-//           path="allblogspage"
-//           element={<AllBlogsListPage listedBlogPage={true} />}
-//         />
-//         <Route
-//           path="philosophy"
-//           element={
-//             <PhilosophyIndexPage
-//               listedBlogPage={true}
-//               genere={"philosophy"}
-//               title={"Philosphy"}
-//             />
-//           }
-//         />
-//         <Route
-//           path="technology"
-//           element={
-//             <TechnologyIndexPage
-//               listedBlogPage={true}
-//               genere={"technology"}
-//               title={"Technology"}
-//             />
-//           }
-//         />
-//       </Route>
-//     </Route>
-//   );
-// };
-
-// export default AllRoutes;
